@@ -29,7 +29,8 @@
       { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
       { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
     ];
-
+    
+    // const people =['lastName, firstName']
     const people = [
       'Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig',
       'Belloc, Hilaire', 'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 'Benjamin, Walter', 'Berlin, Irving',
@@ -89,15 +90,34 @@
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
-    
+    // the below code is usable in the above given link
+
+    // const category= document.querySelector(".mw-category")
+    // const links= Array.from(category.querySelectorAll('a'))
+    // const de= links
+    //               .map(link => link.textContent)
+    //               .filter(link=> link.includes('de'))
 
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    
+    const lastName = people.sort((a,b) =>{
+      name1 = a.split(",")
+      const lastName1= name1[0] 
+      name2 = b.split(",")
+      const lastName2= name2[0] 
+      if (lastName1>lastName2){
+        return 1
+      }
+      return -1
 
+    })
+    console.log(lastName)
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+    
 
   </script>
 </body>
